@@ -1,5 +1,7 @@
 # Lacak — Dashboard OSINT Aktivitas Publik Media Sosial
 
+[![CI](https://github.com/taufiksoleh/lacak/actions/workflows/ci.yml/badge.svg)](https://github.com/taufiksoleh/lacak/actions/workflows/ci.yml)
+
 Lacak membantu analis keamanan menelusuri **aktivitas publik** sebuah akun di **X/Twitter, Instagram,
 Threads, dan YouTube**, lalu menyusun laporan yang komprehensif:
 
@@ -77,6 +79,9 @@ dengan data fiktif.
 cd backend && pytest && ruff check .
 cd frontend && npm run lint && npm run build
 ```
+
+Pengecekan yang sama berjalan otomatis di GitHub Actions (`.github/workflows/ci.yml`) untuk setiap
+pull request dan push ke `main`, ditambah build image Docker dan smoke test `/api/health`.
 
 ## Format import
 
