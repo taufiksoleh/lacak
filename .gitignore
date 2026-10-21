@@ -13,3 +13,4 @@ frontend/dist/
 
 # Env
 .env
+*.tsbuildinfo
