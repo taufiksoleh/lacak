@@ -1,0 +1,166 @@
+# Daftar entitas untuk deteksi afiliasi berbasis aturan.
+# - handles: username media sosial (tanpa @, huruf kecil). Verifikasi ulang sebelum dipakai
+#   untuk keputusan penting; handle bisa berbeda antar platform dan bisa berubah.
+# - domains: domain resmi (paling andal untuk pencocokan).
+# - keywords: nama/sebutan spesifik; hindari kata umum agar tidak salah cocok.
+# Kategori: government | party | company | ngo | media | other
+entities:
+  # --- Pemerintah ---
+  - name: Kementerian Komunikasi dan Digital (Komdigi)
+    category: government
+    handles: [kemkomdigi, kemkominfo]
+    domains: [komdigi.go.id, kominfo.go.id]
+    keywords: [Komdigi, Kominfo, Kementerian Komunikasi dan Digital]
+  - name: Badan Siber dan Sandi Negara (BSSN)
+    category: government
+    handles: [bssn_ri, bssnri]
+    domains: [bssn.go.id]
+    keywords: [BSSN, Badan Siber dan Sandi Negara]
+  - name: Kepolisian Negara Republik Indonesia (Polri)
+    category: government
+    handles: [divhumas_polri, divisihumaspolri]
+    domains: [polri.go.id]
+    keywords: [Divisi Humas Polri]
+  - name: Sekretariat Kabinet
+    category: government
+    handles: [setkabgoid]
+    domains: [setkab.go.id]
+    keywords: [Sekretariat Kabinet]
+  - name: Komisi Pemberantasan Korupsi (KPK)
+    category: government
+    handles: [kpk_ri, official.kpk]
+    domains: [kpk.go.id]
+    keywords: [Komisi Pemberantasan Korupsi]
+  - name: Komisi Pemilihan Umum (KPU)
+    category: government
+    handles: [kpu_id, kpu_ri]
+    domains: [kpu.go.id]
+    keywords: [Komisi Pemilihan Umum]
+  - name: Badan Pengawas Pemilu (Bawaslu)
+    category: government
+    handles: [bawaslu_ri]
+    domains: [bawaslu.go.id]
+    keywords: [Bawaslu]
+  - name: Bank Indonesia
+    category: government
+    handles: [bank_indonesia]
+    domains: [bi.go.id]
+    keywords: [Bank Indonesia]
+  - name: Otoritas Jasa Keuangan (OJK)
+    category: government
+    handles: [ojkindonesia]
+    domains: [ojk.go.id]
+    keywords: [Otoritas Jasa Keuangan]
+
+  # --- Partai politik ---
+  - name: PDI Perjuangan
+    category: party
+    handles: [pdi_perjuangan]
+    domains: [pdiperjuangan.id]
+    keywords: [PDI Perjuangan, PDIP]
+  - name: Partai Gerindra
+    category: party
+    handles: [gerindra]
+    domains: [partaigerindra.or.id]
+    keywords: [Gerindra]
+  - name: Partai Golkar
+    category: party
+    handles: [golkar_indonesia]
+    domains: [partaigolkar.or.id]
+    keywords: [Partai Golkar]
+  - name: Partai Kebangkitan Bangsa (PKB)
+    category: party
+    handles: [dpp_pkb]
+    domains: [pkb.id]
+    keywords: [Partai Kebangkitan Bangsa]
+  - name: Partai NasDem
+    category: party
+    handles: [nasdem]
+    domains: [partainasdem.id]
+    keywords: [NasDem]
+  - name: Partai Keadilan Sejahtera (PKS)
+    category: party
+    handles: [pksejahtera]
+    domains: [pks.id]
+    keywords: [Partai Keadilan Sejahtera]
+  - name: Partai Demokrat
+    category: party
+    handles: [pdemokrat]
+    domains: [demokrat.or.id]
+    keywords: [Partai Demokrat]
+  - name: Partai Amanat Nasional (PAN)
+    category: party
+    handles: [official_pan]
+    domains: [pan.or.id]
+    keywords: [Partai Amanat Nasional]
+  - name: Partai Solidaritas Indonesia (PSI)
+    category: party
+    handles: [psi_id]
+    domains: [psi.id]
+    keywords: [Partai Solidaritas Indonesia]
+
+  # --- Perusahaan / BUMN ---
+  - name: Telkom Indonesia
+    category: company
+    handles: [telkomindonesia]
+    domains: [telkom.co.id]
+    keywords: [Telkom Indonesia]
+  - name: Pertamina
+    category: company
+    handles: [pertamina]
+    domains: [pertamina.com]
+    keywords: [Pertamina]
+  - name: Bank Rakyat Indonesia (BRI)
+    category: company
+    handles: [kontakbri, bankbri_id]
+    domains: [bri.co.id]
+    keywords: [Bank Rakyat Indonesia]
+  - name: Bank Mandiri
+    category: company
+    handles: [bankmandiri]
+    domains: [bankmandiri.co.id]
+    keywords: [Bank Mandiri]
+  - name: Bank Central Asia (BCA)
+    category: company
+    handles: [halobca, goodlifebca]
+    domains: [bca.co.id]
+    keywords: [Bank Central Asia]
+  - name: Gojek / GoTo
+    category: company
+    handles: [gojekindonesia]
+    domains: [gojek.com, gotocompany.com]
+    keywords: [Gojek]
+  - name: Tokopedia
+    category: company
+    handles: [tokopedia]
+    domains: [tokopedia.com]
+    keywords: [Tokopedia]
+  - name: Shopee Indonesia
+    category: company
+    handles: [shopeeid, shopee_id]
+    domains: [shopee.co.id]
+    keywords: [Shopee]
+
+  # --- Media ---
+  - name: Kompas
+    category: media
+    handles: [kompascom]
+    domains: [kompas.com, kompas.id]
+    keywords: [Kompas.com]
+  - name: Detik
+    category: media
+    handles: [detikcom]
+    domains: [detik.com]
+    keywords: [detikcom]
+  - name: Tempo
+    category: media
+    handles: [tempodotco]
+    domains: [tempo.co]
+    keywords: [Tempo.co]
+
+  # --- Contoh fiktif untuk mode demo ---
+  - name: PT Kopi Senja Nusantara (contoh fiktif)
+    category: company
+    handles: [kopisenja_id]
+    domains: [kopisenja.example]
+    keywords: [Kopi Senja]
